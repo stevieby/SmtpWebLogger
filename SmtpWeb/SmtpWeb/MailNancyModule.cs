@@ -35,7 +35,12 @@ namespace SmtpWeb
                 return Response.AsJson(true); 
             };
 
-            Get["/"] = v => View["views/index.html"];
+            Get["/"] = v =>
+            {
+                var messages = EmailRepository.Get().FindAll().ToList();
+                return View["views/index.html", messages]; 
+            };
+                                                           
 
         }
     }

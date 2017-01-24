@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using LiteDB;
 
 namespace SmtpWeb
@@ -21,6 +22,12 @@ namespace SmtpWeb
             get; set; 
             
         }
+
+        public string ToAddressAsString
+        {
+            get { return string.Join(",", ToAddress.Select(x=>x.Email).ToList());   }
+        }
+
 
         public DateTimeOffset Sent { get; set; }
 
