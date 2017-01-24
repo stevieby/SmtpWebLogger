@@ -21,4 +21,4 @@ Uses the following
 * SMTPServer - great little library to act as a fake SMTP and then capture them
 * LiteDB - amazing little NoSql database 
 * MimeKitLite - mime parsing library
-* Bootstrap - gui
+* Bootstrap - better looking website
