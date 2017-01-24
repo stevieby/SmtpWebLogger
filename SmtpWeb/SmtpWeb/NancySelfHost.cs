@@ -13,10 +13,13 @@ namespace SmtpWeb
         {
             var hostConfiguration = new HostConfiguration
             {
-                UrlReservations = new UrlReservations() { CreateAutomatically = true }
+                UrlReservations = new UrlReservations() { CreateAutomatically = true } ,
+
             };
 
-            m_nancyHost = new NancyHost(hostConfiguration,new Uri("http://localhost:5000"));
+            m_nancyHost = new NancyHost(   hostConfiguration, new Uri("http://localhost:5000"));
+
+
             m_nancyHost.Start();
 
       

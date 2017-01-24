@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SMTP Email Log</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="Content/starter-template.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">SMTP Email Log</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+
+    <div>
+        <h1>Emails</h1>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Id</th>  
+                <th>Date Sent</th>
+                <th>From Address</th> 
+                <th>From Name</th>
+                <th>To Address</th>
+                <th>Subject</th>     
+                <th>IsHtml</th>
+                <th>Body</th>
+            </tr>
+            </thead>
+            <tbody>
+
+
+            @Each 
+            <tr>
+                <td>@Current.SerializedObjectId</td>
+                <td>@Current.Sent</td>
+                <td>@Current.FromName.Email</td> 
+                <td>@Current.FromName.Name</td>
+                <td>@Current.ToName</td>
+                <td>@Current.Subject</td>
+                <td>@Current.IsHtml</td> 
+                <td>@Current.HtmlBody</td>
+            </tr>
+            @EndEach
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
