@@ -16,9 +16,9 @@ TODO
 * Configuration improvements
 
 Uses the following
-* Topshelf - Windows service functionalit
-* Nancy - Rest api +  
-* SMTPServer - great little library to capture SMTP messages
-* Bootstrap to
+* Topshelf - Windows service functionality in console
+* Nancy - Rest api + serving up the view
+* SMTPServer - great little library to act as a fake SMTP and then capture them
 * LiteDB - amazing little NoSql database 
 * MimeKitLite - mime parsing library
+* Bootstrap - gui
