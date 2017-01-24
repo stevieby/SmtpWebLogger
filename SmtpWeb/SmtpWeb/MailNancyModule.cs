@@ -1,6 +1,11 @@
-﻿using System.Linq;
+﻿using System;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 using LiteDB;
 using Nancy;
+using Nancy.Conventions;
+using Nancy.Responses;
 
 namespace SmtpWeb
 {
@@ -30,8 +35,11 @@ namespace SmtpWeb
                 return Response.AsJson(true); 
             };
 
+            Get["/"] = v => View["views/index.html"];
 
-                                         
         }
     }
+
+      
+   
 }
