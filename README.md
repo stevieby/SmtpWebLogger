@@ -1,6 +1,6 @@
-# StmpWeb
+# SmtpWeb
 
-SMTP logging console app / Windows service that runs on Port 5000 for Web with a STMP Server on port 25, 587.
+SMTP logging console app / Windows service that runs on Port 5000 for Web with a Smtp Server on port 25, 587.
 Hacked together in an evening to just allow me to send emails to a fake SMTP monitor and log them to datastore for viewing.
 
 Locations
